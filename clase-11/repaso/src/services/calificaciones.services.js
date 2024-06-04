@@ -5,12 +5,30 @@ const getCalificaciones = async () => {
     return calificaciones
 }
 
+const getPromedioCalificaciones = async () => {
+    const calificaciones = await model.getPromedioCalificaciones()
+    return calificaciones
+}
+
 const postCalificaciones = async (data) => {
     const calificaciones = await model.postCalificaciones(data)
     return calificaciones
 }
 
+const modificarCalificaciones = async (id, data) => {
+    const calificaciones = await model.modificarCalificaciones(id, data)
+    return calificaciones
+}
+
+const borrarCalificaciones = async (id) => {
+    const calificaciones = await model.borrarCalificaciones(id)
+    return calificaciones
+}
+
 export default {
     getCalificaciones,
-    postCalificaciones
+    postCalificaciones,
+    getPromedioCalificaciones,
+    modificarCalificaciones,
+    borrarCalificaciones
 }
